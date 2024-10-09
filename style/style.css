@@ -73,3 +73,13 @@ body {
     overflow-y: auto;
 
 }
+
+.light-theme {
+    background-color: #f8f9fa; /* Jasne tło */
+    color: black; /* Ciemny tekst */
+}
+
+.dark-theme {
+    background-color: #303845; /* Ciemne tło (aktualny motyw) */
+    color: white; /* Jasny tekst */
+}
