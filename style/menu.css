@@ -11,8 +11,3 @@
     background-color: rgba(255, 255, 255, 0.2); /* Efekt podświetlenia na hover */
     cursor: pointer; /* Zmiana kursora, aby wskazywał, że element jest klikalny */
 }
-
-/* Dodatkowo, możemy dodać styl dla przycisku "Ustawienia" */
-.menu ul li#settings:hover {
-    background-color: rgba(0, 123, 255, 0.4); /* Inny kolor podświetlenia dla "Ustawienia" */
-}
