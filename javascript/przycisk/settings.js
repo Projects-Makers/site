@@ -19,3 +19,14 @@ document.getElementById('settings').addEventListener('click', function() {
     `;
     toggleMenu();  // Zamknięcie menu po kliknięciu w "Ustawienia"
 });
+
+    document.getElementById('theme').addEventListener('change', function() {
+        if (this.value === 'light') {
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+        } else {
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+        }
+    });
+});
