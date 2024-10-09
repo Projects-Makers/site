@@ -1,45 +1,71 @@
 <!DOCTYPE html>
+
 <html lang="pl">
+
 <head>
+
     <title>Śląsk</title>
+
     <meta charset="utf-8">
+
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
+
     <div id="baner">
+
         <div id="hamburger" class="hamburger-btn" onclick="toggleMenu()">
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
         </div>
+
         <h1 style="color:white; text-align:center;"></h1>
-        <div id="login" style="color: white; margin-left: auto;">
-            <a href="#" id="loginLink" style="color: white; text-decoration: none;">Zaloguj się</a>
-        </div>
+
     </div>
+
+
 
     <div id="menu" class="menu">
-        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+
+        <div class="close-btn" onclick="toggleMenu()">
+
+            &times; <!-- Symbol "X" -->
+
+        </div>
+
         <ul>
-            <li id="home">Strona główna</li>
-            <li id="about">O nas</li>
-            <li id="gallery">Galeria</li>
-            <li id="settings">Ustawienia</li>
+
+            <li>Strona główna</li>
+
+            <li>O nas</li>
+
+            <li>Galeria</li>
+
+            <li>Ustawienia</li>
+
         </ul>
+
     </div>
 
-    <main id="tresc">
-        <!-- Wczytywana zawartość formularzy -->
-    </main>
 
-    <script src="javascript/toggleMenu.js"></script>
-    <script src="javascript/translations.js"></script>
-    <script src="javascript/setDefaultTheme.js"></script>
-    <script src="javascript/renderHomePage.js"></script>
-    <script src="javascript/renderSettings.js"></script>
-    <script src="javascript/renderMenu.js"></script>
-    <script src="javascript/loadLoginForm.js"></script>
-    <script src="javascript/loadRegisterForm.js"></script>
-    <script src="javascript/eventListeners.js"></script>
+
+    <div id="structure">
+
+        <div id="tresc"></div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
