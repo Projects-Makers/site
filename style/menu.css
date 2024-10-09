@@ -1,0 +1,18 @@
+.menu ul li {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    transition: background-color 0.3s ease; /* Efekt płynnego przejścia */
+    padding: 10px; /* Dodanie przestrzeni wokół tekstu */
+    border-radius: 5px; /* Zaokrąglone rogi dla efektu */
+}
+
+.menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efekt podświetlenia na hover */
+    cursor: pointer; /* Zmiana kursora, aby wskazywał, że element jest klikalny */
+}
+
+/* Dodatkowo, możemy dodać styl dla przycisku "Ustawienia" */
+.menu ul li#settings:hover {
+    background-color: rgba(0, 123, 255, 0.4); /* Inny kolor podświetlenia dla "Ustawienia" */
+}
