@@ -1,2 +1,0 @@
-# strona-slask
-robimy strone
