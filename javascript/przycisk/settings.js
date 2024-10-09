@@ -6,7 +6,7 @@ document.getElementById('settings').addEventListener('click', function() {
             <label for="theme">Wybierz motyw:</label>
             <select id="theme">
                 <option value="light">Jasny</option>
-                <option value="dark" selected>Ciemny</option>
+                <option value="dark">Ciemny</option>
             </select>
         </div>
         <div>
@@ -18,15 +18,4 @@ document.getElementById('settings').addEventListener('click', function() {
         </div>
     `;
     toggleMenu();  // Zamknięcie menu po kliknięciu w "Ustawienia"
-
-    // Dodajemy nasłuchiwacz zdarzeń dla wyboru motywu
-    document.getElementById('theme').addEventListener('change', function() {
-        if (this.value === 'light') {
-            document.body.classList.add('light-theme');
-            document.body.classList.remove('dark-theme');
-        } else {
-            document.body.classList.add('dark-theme');
-            document.body.classList.remove('light-theme');
-        }
-    });
 });
