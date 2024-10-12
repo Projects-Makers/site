@@ -1,3 +1,21 @@
+/* Plik: menu.css */
+
+#menu {
+    width: 0;
+    transition: width 0.3s ease; /* Płynne wysuwanie menu */
+    overflow: hidden; /* Ukryj zawartość, gdy szerokość jest 0 */
+    /* Inne style menu */
+}
+
+#menu.open {
+    width: 400px; /* Szerokość menu przy otwieraniu */
+}
+
+#menu.close {
+    width: 0; /* Natychmiastowe zamknięcie menu */
+    transition: none; /* Usuń animację przy zamykaniu */
+}
+
 .menu ul li {
     margin-bottom: 20px;
     font-size: 24px;

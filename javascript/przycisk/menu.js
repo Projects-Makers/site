@@ -60,7 +60,8 @@ function displaySettings(openMenu) {
 
     // Upewnienie się, że menu jest otwarte tylko wtedy, gdy openMenu jest true
     if (openMenu) {
-        document.getElementById('menu').style.width = '250px'; // Upewnij się, że menu jest otwarte
+        document.getElementById('menu').classList.add('open');
+        document.getElementById('menu').classList.remove('close');
         toggleMenu(); // Zamknięcie menu po kliknięciu w "Ustawienia"
     }
 }
@@ -69,4 +70,40 @@ function displaySettings(openMenu) {
 function updateContent() {
     // Odświeżanie treści na podstawie aktualnego języka
     displaySettings(false); // Wyświetlenie ustawień z nowym językiem bez otwierania menu
+    setMenuTranslations(); // Aktualizacja tłumaczeń w menu
 }
+
+// Funkcja do przełączania menu
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        menu.classList.add('close'); // Natychmiastowe zamknięcie menu
+    } else {
+        menu.classList.remove('close');
+        menu.classList.add('open'); // Płynne otwarcie menu
+    }
+}
+
+// Funkcja do ustawiania zawartości menu
+function setMenuTranslations() {
+    document.getElementById('home').textContent = translations[currentLanguage].home;
+    document.getElementById('settings').textContent = translations[currentLanguage].settings;
+}
+
+// Dodanie obsługi zmiany języka
+document.getElementById('language-pl').addEventListener('click', function() {
+    currentLanguage = 'pl';
+    updateContent();
+});
+
+document.getElementById('language-en').addEventListener('click', function() {
+    currentLanguage = 'en';
+    updateContent();
+});
+
+// Wywołanie funkcji po załadowaniu dokumentu
+document.addEventListener('DOMContentLoaded', function() {
+    setMenuTranslations();
+    displayHomePage(); // Ustawienie strony głównej jako domyślnej
+});
