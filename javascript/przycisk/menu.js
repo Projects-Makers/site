@@ -1,5 +1,3 @@
-// Plik: javascript/przycisk/menu.js
-
 let currentLanguage = 'pl'; // Domyślnie język polski
 
 // Funkcja do wyświetlania treści strony głównej
@@ -90,17 +88,6 @@ function setMenuTranslations() {
     document.getElementById('home').textContent = translations[currentLanguage].home;
     document.getElementById('settings').textContent = translations[currentLanguage].settings;
 }
-
-// Dodanie obsługi zmiany języka
-document.getElementById('language-pl').addEventListener('click', function() {
-    currentLanguage = 'pl';
-    updateContent();
-});
-
-document.getElementById('language-en').addEventListener('click', function() {
-    currentLanguage = 'en';
-    updateContent();
-});
 
 // Wywołanie funkcji po załadowaniu dokumentu
 document.addEventListener('DOMContentLoaded', function() {
