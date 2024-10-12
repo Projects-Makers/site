@@ -14,19 +14,19 @@ document.getElementById('home').addEventListener('click', function() {
 
 // Funkcja do wyświetlania treści ustawień
 document.getElementById('settings').addEventListener('click', function() {
-    displaySettings(); // Wywołanie funkcji do wyświetlania ustawień
+    displaySettings(true); // Wywołanie funkcji do wyświetlania ustawień z otwarciem menu
 });
 
 // Funkcja do wyświetlania ustawień
-function displaySettings() {
+function displaySettings(openMenu) {
     const tresc = document.getElementById('tresc');
     tresc.innerHTML = `
         <h2>${translations[currentLanguage].settings}</h2>
         <div>
             <label for="theme">${translations[currentLanguage].selectTheme}</label>
             <select id="theme">
-                <option value="light">Jasny</option>
-                <option value="dark">Ciemny</option>
+                <option value="light">${translations[currentLanguage].light}</option>
+                <option value="dark">${translations[currentLanguage].dark}</option>
             </select>
         </div>
         <div>
@@ -58,12 +58,15 @@ function displaySettings() {
         }
     });
 
-    // Upewnienie się, że menu jest otwarte
-    document.getElementById('menu').style.width = '250px'; // Upewnij się, że menu jest otwarte
+    // Upewnienie się, że menu jest otwarte tylko wtedy, gdy openMenu jest true
+    if (openMenu) {
+        document.getElementById('menu').style.width = '250px'; // Upewnij się, że menu jest otwarte
+        toggleMenu(); // Zamknięcie menu po kliknięciu w "Ustawienia"
+    }
 }
 
 // Funkcja odświeżająca treści na stronie po zmianie języka
 function updateContent() {
     // Odświeżanie treści na podstawie aktualnego języka
-    displaySettings(); // Wyświetlenie ustawień z nowym językiem
+    displaySettings(false); // Wyświetlenie ustawień z nowym językiem bez otwierania menu
 }
