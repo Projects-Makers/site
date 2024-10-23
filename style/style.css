@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-image: url('Mapa.png');
 }
 
 body[data-theme='light'] {
