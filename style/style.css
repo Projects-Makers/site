@@ -17,7 +17,7 @@ body {
 }
 
 body[data-theme='light'] {
-    background-image: url('Mapa.png');
+    background-color: #303845; /* Ciemny kolor tła */
     color: #000000; /* Czarny tekst */
 }
 
